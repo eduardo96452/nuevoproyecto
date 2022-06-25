@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function getAbsolutePath() {
+                var loc = window.location;
+                var pathName = loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
+                document.write(loc.href.substring(0, loc.href.length - ((loc.pathname + loc.search + loc.hash).length - pathName.length)));
+            }
+        </script>
     </head>
     <body>
-        <h1>hola mundo</h1>
+        <h1>getAbsolutePath</h1>
+        <script>getAbsolutePath()</script><br>
+        <a href="jspe/codigo/newjsp.jsp">ir a jsp</a>
     </body>
 </html>
